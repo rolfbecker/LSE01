@@ -1,1 +1,28 @@
-[{"id":"2d6aba65.31f406","type":"debug","z":"d789dd60.9201b","name":"msg Timestamp","active":false,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","targetType":"msg","x":740,"y":400,"wires":[]}]
+[
+    {
+        "id": "eb668219.29b78",
+        "type": "function",
+        "z": "d789dd60.9201b",
+        "name": "extract measurements",
+        "func": "\n// extract measurement values from payload\nvar input = msg.payload;\n\n// extract device from topic: last but one element\nvar lst = msg.topic.split(\"/\");\nvar device = lst[lst.length-2];\n\nvar msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\nvar msg4 = {};\n\nsoil_moisture                = input.payload_fields.soil_sensor.moisture.value;\nsoil_temperature             = input.payload_fields.soil_sensor.temperature.value;\nsoil_electrical_conductivity = input.payload_fields.soil_sensor.electrical_conductivity.value;\nbattery_voltage  = input.payload_fields.battery_voltage.value;\ntime = input.metadata.time;\n\n\nmsg1.topic = device + \"_soil_moisture\";\nmsg1.payload = soil_moisture;\nmsg1.timestamp = time;\n\nmsg2.topic = device + \"_soil_electrical_conductivity\";\nmsg2.payload = soil_electrical_conductivity;\nmsg2.timestamp = time;\n\nmsg3.topic = device + \"_soil_temperature\";\nmsg3.payload = soil_temperature;\nmsg3.timestamp = time;\n\nmsg4.topic = device + \"_battery_voltage\";\nmsg4.payload = battery_voltage;\nmsg4.timestamp = time;\n\nreturn [msg1, msg2, msg3, msg4];\n\n",
+        "outputs": 4,
+        "noerr": 0,
+        "x": 460,
+        "y": 240,
+        "wires": [
+            [
+                "a38756a8.959e08",
+                "d49fe33b.d66e7"
+            ],
+            [
+                "b7085988.ede398"
+            ],
+            [
+                "5e5e25ac.a9edec"
+            ],
+            [
+                "23014e31.81b612"
+            ]
+        ]
+    }
+]
