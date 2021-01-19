@@ -1,0 +1,10 @@
+
+lse01_006
+DEV ADDR: 01 82 90 00
+DEV EUI: A8 40 41 61 51 82 90 00
+APP EUI: A0 00 00 00 00 00 01 01
+APP KEY: A4 FB C4 B7 B1 4D 3B D6 E1 7A 9B 6C AF A3 A2 83
+
+{"transmission_time_interval_secs": 600}
+
+

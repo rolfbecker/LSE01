@@ -1,0 +1,113 @@
+
+Payload Comparison
+
+Both sensors are in my raised bed at home.
+
+lse01_n001:
+0CC300001209009A465001
+
+FIELDS
+{
+  "battery_voltage": {
+    "comment": "LSE01 battery voltage",
+    "unit": "V",
+    "value": 3.267
+  },
+  "extra_temperature_sensor": {
+    "comment": "Temperature from an extra DS18B20. Not connected by default.",
+    "unit": "°C",
+    "value": "0.00"
+  },
+  "soil_sensor": {
+    "electrical_conductivity": {
+      "comment": "Soil electrical conductivity (EC)",
+      "unit": "uS/cm",
+      "value": 18000
+    },
+    "moisture": {
+      "comment": "Volumetric soil water content",
+      "unit": "%vol",
+      "value": "46.17"
+    },
+    "temperature": {
+      "comment": "Soil temperature",
+      "unit": "°C",
+      "value": "1.54"
+    }
+  },
+  "type": "LSE01"
+}
+
+METADATA
+{
+  "time": "2021-01-15T23:15:35.995932266Z",
+  "frequency": 868.3,
+  "modulation": "LORA",
+  "data_rate": "SF7BW125",
+  "coding_rate": "4/5",
+  "gateways": [
+    {
+      "gtw_id": "eui-b827ebfffeeb09b2",
+      "timestamp": 825203139,
+      "time": "2021-01-15T23:15:35.975225Z",
+      "channel": 1,
+      "rssi": -67,
+      "snr": 11.8
+    }
+  ]
+}
+
+
+les01_n006:
+0CF0000009D7009D003500
+
+FIELDS
+{
+  "battery_voltage": {
+    "comment": "LSE01 battery voltage",
+    "unit": "V",
+    "value": 3.312
+  },
+  "extra_temperature_sensor": {
+    "comment": "Temperature from an extra DS18B20. Not connected by default.",
+    "unit": "°C",
+    "value": "0.00"
+  },
+  "soil_sensor": {
+    "electrical_conductivity": {
+      "comment": "Soil electrical conductivity (EC)",
+      "unit": "uS/cm",
+      "value": 53
+    },
+    "moisture": {
+      "comment": "Volumetric soil water content",
+      "unit": "%vol",
+      "value": "25.19"
+    },
+    "temperature": {
+      "comment": "Soil temperature",
+      "unit": "°C",
+      "value": "1.57"
+    }
+  },
+  "type": "LSE01"
+}
+
+METADATA
+{
+  "time": "2021-01-15T23:13:07.738687284Z",
+  "frequency": 867.5,
+  "modulation": "LORA",
+  "data_rate": "SF7BW125",
+  "coding_rate": "4/5",
+  "gateways": [
+    {
+      "gtw_id": "eui-b827ebfffeeb09b2",
+      "timestamp": 676944580,
+      "time": "2021-01-15T23:13:07.717507Z",
+      "channel": 5,
+      "rssi": -66,
+      "snr": 7.5
+    }
+  ]
+}
