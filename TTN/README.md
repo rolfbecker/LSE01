@@ -12,10 +12,10 @@ A LoRa message payload sent by a device such as the LSE01 is byte array. See the
 The example decoder in this folder converts a LSE01 message into a JSON object. 
 
 
-### INPUT PAYLOAD (BINARY): <br>
+### INPUT PAYLOAD (BINARY):
 `0C D0 00 00 03 3F 07 14 18 9C 01`
 
-### OUTPUT (JSON): <br>
+### OUTPUT (JSON):
 ```
 {
   "battery_voltage": {
@@ -53,8 +53,8 @@ The example decoder in this folder converts a LSE01 message into a JSON object.
 
 Currently only the message to set the measurement/transmission interval is defined.
 
-### INPUT JSON: <br>
+### INPUT JSON:
 `{"transmission_time_interval_secs": 30}`
 
-### OUTPUT PAYLOAD: <br>
+### OUTPUT PAYLOAD:
 `01 00 00 1E`
